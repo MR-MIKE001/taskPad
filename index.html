@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Taskpad: private, no-login task manager</title>
+    <meta
+      name="description"
+      content="Taskpad is a fast, private task manager. No account, no server: your tasks stay in your browser."
+    />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script>
+      // Apply the saved theme before first paint so there is no flash of the wrong theme.
+      (function () {
+        try {
+          var prefs = JSON.parse(localStorage.getItem('taskpad:prefs:v1') || '{}');
+          var theme = prefs.theme || 'system';
+          var dark = theme === 'dark' || (theme === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Taskpad needs JavaScript to run. Your tasks never leave your browser.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
