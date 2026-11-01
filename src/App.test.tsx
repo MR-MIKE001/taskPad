@@ -149,4 +149,14 @@ describe('Taskpad app', () => {
     await user.click(screen.getAllByRole('button', { name: 'Undo' }).at(-1)!);
     expect(jobRows()).toHaveLength(1);
   });
+
+  it('credits the author with a link to their portfolio', () => {
+    renderApp();
+    const links = screen.getAllByRole('link', { name: /Micheal A Ibrahim/ });
+    expect(links.length).toBeGreaterThan(0);
+    for (const link of links) {
+      expect(link).toHaveAttribute('href', 'https://mr-mike-site.onrender.com');
+      expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    }
+  });
 });

@@ -2,11 +2,13 @@
 
 **A private task manager and job-search tracker that runs entirely in your browser.** No account, no server, no tracking: tasks, lists and job applications are stored in `localStorage` and never leave your device.
 
-![React 19](https://img.shields.io/badge/React-19-61dafb) ![TypeScript strict](https://img.shields.io/badge/TypeScript-strict-3178c6) ![Vite 8](https://img.shields.io/badge/Vite-8-646cff) ![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8) ![Tests: 64 passing](https://img.shields.io/badge/tests-64_passing-22c55e)
+![React 19](https://img.shields.io/badge/React-19-61dafb) ![TypeScript strict](https://img.shields.io/badge/TypeScript-strict-3178c6) ![Vite 8](https://img.shields.io/badge/Vite-8-646cff) ![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8) ![Tests: 65 passing](https://img.shields.io/badge/tests-65_passing-22c55e)
 
 - **Plan your work:** natural-language quick add, smart views, lists, tags, subtasks, recurring tasks and drag-to-reorder.
 - **Run your job search:** follow each application from wishlist to offer, with a status timeline, follow-up reminders and pipeline stats.
 - **Never lose anything:** undo and redo for every change, live sync between tabs, JSON backup and import, and clear warnings whenever saving could fail.
+
+Built by **Micheal A Ibrahim**. See more of my work on my [portfolio](https://mr-mike-site.onrender.com).
 
 ## Contents
 
@@ -19,6 +21,7 @@
 - [Deployment](#deployment)
 - [Documentation](#documentation)
 - [Limitations and roadmap](#limitations-and-roadmap)
+- [Author](#author)
 
 ## Quick start
 
@@ -140,7 +143,7 @@ docs/             project guide and user manual (PDF)
 
 ## Testing and quality
 
-64 tests across 8 files run with Vitest and Testing Library in jsdom:
+65 tests across 8 files run with Vitest and Testing Library in jsdom:
 
 - **Unit:** date maths, recurrence, the quick-add parser, selectors, job rules (URL safety, timeline, stats, follow-ups, sanitising, merging, CSV), the reducer and undo history, and persistence (round trips, corrupt data, newer versions).
 - **Integration:** full user flows through the real app, such as adding and editing tasks, undoing deletes, creating lists, and tracking a job from creation through a status change, a follow-up, saving, deletion and undo.
@@ -176,3 +179,10 @@ npm test && npm run typecheck && npm run lint
 6. CI: GitHub Actions running tests, lint, Playwright end-to-end tests, accessibility checks and a bundle-size budget.
 7. IndexedDB storage with CV and cover-letter attachments.
 8. Optional, end-to-end encrypted sync between devices.
+
+## Author
+
+**Micheal A Ibrahim**
+
+- Portfolio: [mr-mike-site.onrender.com](https://mr-mike-site.onrender.com)
+- GitHub: [@MR-MIKE001](https://github.com/MR-MIKE001)

@@ -3,6 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "description": "A fast, private, no-login task manager. Everything is stored in your browser.",
+  "author": "Micheal A Ibrahim (https://mr-mike-site.onrender.com)",
+  "homepage": "https://github.com/MR-MIKE001/taskPad",
   "type": "module",
   "scripts": {
     "dev": "vite",

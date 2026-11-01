@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { ConfirmDialog, ImportDialog, ListDialog, ShortcutsDialog, applyImport } from './components/Dialogs';
+import { AuthorCredit } from './components/AuthorCredit';
 import { Icon } from './components/Icon';
 import { JobsView } from './components/JobsView';
 import { QuickAdd } from './components/QuickAdd';
@@ -333,6 +334,10 @@ export default function App() {
               </div>
             </>
           )}
+          {/* On small screens the sidebar (and its credit) is hidden behind the menu, so repeat it here. */}
+          <footer className="mt-12 text-center lg:hidden">
+            <AuthorCredit />
+          </footer>
         </div>
       </main>
 

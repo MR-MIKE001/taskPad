@@ -4,6 +4,7 @@ import type { Counts } from '../lib/selectors';
 import { cx } from '../lib/text';
 import { viewKey } from '../hooks/useHashView';
 import { INBOX_ID, type TaskList, type ThemePref, type View } from '../store/types';
+import { AuthorCredit } from './AuthorCredit';
 import { Icon, type IconName } from './Icon';
 
 interface SidebarProps {
@@ -217,6 +218,7 @@ export function Sidebar(props: SidebarProps) {
               </button>
             ))}
           </div>
+          <AuthorCredit className="border-t border-slate-200 px-2 pt-2.5 dark:border-slate-800" />
         </div>
       </aside>
     </>
